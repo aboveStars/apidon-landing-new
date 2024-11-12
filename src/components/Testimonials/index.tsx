@@ -5,40 +5,40 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Sarah L.",
+    designation: "Event Organizer",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
+      "Apidon has transformed the way we engage with our guests. The digital collectibles are such a hit—they’re unique, memorable, and our guests love sharing them!",
+    image: "/images/testimonials/woman.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Jake M.",
+    designation: "Conference Host",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
+      "Using Apidon added a whole new dimension to our event. Guests could showcase their attendance, and the brand exposure we gained from their sharing was incredible.",
+    image: "/images/testimonials/man.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Emily R.",
+    designation: "Festival Organizer",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
+      "Apidon’s platform was a game-changer. It’s easy to create custom collectibles, and the social features helped our event stay visible and talked about long after it ended!",
+    image: "/images/testimonials/woman.png",
     star: 5,
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Discover how Apidon is transforming events through the experiences of our users."
           center
         />
 

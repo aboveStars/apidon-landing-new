@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Apidon offers flexible, affordable pricing to help you create memorable events without the high costs."
           center
           width="665px"
         />
@@ -59,43 +59,43 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
+            packageName="Free"
+            price={isMonthly ? "0" : "0"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Get started with Apidon, offering essential features for small events."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Social Media Integration" status="active" />
+            <OfferList text="Digital Collectibles Creation" status="inactive" />
+            <OfferList text="Guest Engagement" status="inactive" />
+            <OfferList text="Real-Time Event Analytics" status="inactive" />
+            <OfferList text="Brand Visibility" status="inactive" />
+            <OfferList text="Priority Support" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
+            packageName="Premium"
+            price={isMonthly ? "19" : "190"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Advanced tools for engagement and brand visibility."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Social Media Integration" status="active" />
+            <OfferList text="Digital Collectibles Creation" status="active" />
+            <OfferList text="Guest Engagement" status="active" />
+            <OfferList text="Real-Time Event Analytics" status="inactive" />
+            <OfferList text="Brand Visibility" status="inactive" />
+            <OfferList text="Priority Support" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
+            packageName="Premium+"
+            price={isMonthly ? "39" : "390"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="All features and dedicated support for seamless management."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Social Media Integration" status="active" />
+            <OfferList text="Digital Collectibles Creation" status="active" />
+            <OfferList text="Guest Engagement" status="active" />
+            <OfferList text="Real-Time Event Analytics" status="active" />
+            <OfferList text="Brand Visibility" status="active" />
+            <OfferList text="Priority Support" status="active" />
           </PricingBox>
         </div>
       </div>
