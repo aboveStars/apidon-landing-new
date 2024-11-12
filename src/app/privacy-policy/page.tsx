@@ -1,8 +1,25 @@
 import React from "react";
 
-type Props = {};
+import { Metadata } from "next";
 
-export default function page({}: Props) {
+export const metadata: Metadata = {
+  title: "Apidon",
+  description: "Make Every Event Unforgettable",
+  icons: [
+    {
+      media: "(prefers-color-scheme: light)",
+      url: "/images/android-icon-48x48.png",
+      href: "/images/android-icon-48x48.png",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      url: "/images/android-icon-48x48.png",
+      href: "/images/android-icon-48x48.png",
+    },
+  ],
+};
+
+export default function page() {
   return (
     <div className="mx-auto max-w-3xl space-y-6 px-4 pt-32 text-gray-700">
       <h1>Privacy Policy</h1>
