@@ -65,15 +65,12 @@ const Header = () => {
                   <img
                     src="/images/logo/logo.png"
                     alt="logo"
-                    width={38}
-                    height={38}
+                    width={35}
+                    height={35}
                   />
                   <text
-                    className="text-black dark:text-white"
-                    style={{
-                      fontSize: "28px",
-                      fontWeight: "bold",
-                    }}
+                    className="text-black dark:text-white text-xl md:text-2xl font-bold"
+                   
                   >
                     Apidon
                   </text>
