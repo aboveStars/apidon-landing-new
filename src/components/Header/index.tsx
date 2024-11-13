@@ -40,21 +40,16 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header left-0 top-0 z-40 flex w-full items-center justify-center ${
           sticky
-            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
-            : "absolute bg-transparent"
+            ? "fixed z-[9999] bg-white !bg-opacity-80 py-4 backdrop-blur-sm transition dark:bg-gray-dark md:py-0"
+            : "fixed bg-transparent py-5"
         }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+          <div className={`relative flex items-center justify-between`}>
             <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
+              <Link href="/" className={`header-logo block w-full`}>
                 <div
                   style={{
                     display: "flex",
@@ -63,16 +58,12 @@ const Header = () => {
                   }}
                 >
                   <img
+                    className="size-8 md:size-10"
                     src="/images/logo/logo.png"
                     alt="logo"
-                    width={35}
-                    height={35}
                   />
-                  <text
-                    className="text-black dark:text-white text-xl md:text-2xl font-bold"
-                   
-                  >
-                    Apidon
+                  <text className="text-lg font-bold text-black dark:text-white md:text-2xl">
+                    APIDON
                   </text>
                 </div>
               </Link>
@@ -166,13 +157,14 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="https://testflight.apple.com/join/AeCqrVcg"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
+                  className="hidden rounded-full px-7 py-3 text-base font-medium text-dark transition duration-300 hover:bg-gray-200 hover:opacity-80 dark:text-white dark:hover:bg-gray-700 md:block"
                 >
                   Sign In
                 </Link>
+
                 <Link
                   href="https://testflight.apple.com/join/AeCqrVcg"
-                  className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
+                  className="dark:bg-primary-dark hidden rounded-full bg-primary px-8 py-3 text-base font-medium text-white shadow-md transition duration-300 hover:bg-opacity-90 hover:shadow-lg md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Sign Up
                 </Link>
