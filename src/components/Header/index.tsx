@@ -43,7 +43,7 @@ const Header = () => {
         className={`header left-0 top-0 z-40 flex w-full items-center justify-center ${
           sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 py-4 backdrop-blur-sm transition dark:bg-gray-dark md:py-0"
-            : "fixed bg-transparent py-5"
+            : "fixed bg-transparent py-4 md:py-0"
         }`}
       >
         <div className="container">
@@ -58,11 +58,11 @@ const Header = () => {
                   }}
                 >
                   <img
-                    className="size-8 md:size-10"
+                    className="size-8 md:size-8"
                     src="/images/logo/logo.png"
                     alt="logo"
                   />
-                  <text className="text-lg font-bold text-black dark:text-white md:text-2xl">
+                  <text className="text-lg font-bold text-black dark:text-white md:text-xl">
                     APIDON
                   </text>
                 </div>

@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] md:text-center">
-                <div className="my-10 rounded-full bg-gradient-to-r from-violet-800 to-cyan-500 px-5 py-2.5 text-center text-xs font-bold md:hidden">
+                <div className="my-5 mb-8 rounded-full bg-gradient-to-r from-violet-800 to-cyan-500 px-5 py-2.5 text-center text-xs font-bold md:hidden">
                   <Link href="https://testflight.apple.com/join/AeCqrVcg">
                     🚀 Apidon Public Beta is Now Live 🚀
                   </Link>
@@ -75,7 +75,7 @@ const Hero = () => {
                   <span className="absolute inset-0 h-full w-full rounded-lg bg-white opacity-0 transition-opacity duration-300 ease-in-out"></span>
                 </Link>
 
-                <div className="flex w-4/5 items-center justify-between rounded-lg border border-solid border-gray-700 px-5 py-3 md:hidden">
+                <div className="flex w-4/5 items-center justify-between rounded-lg border border-solid border-gray-700 px-5 py-3 mb-5 md:hidden">
                   <Link href="https://testflight.apple.com/join/AeCqrVcg">
                     Join Beta on TestFlight!
                   </Link>
