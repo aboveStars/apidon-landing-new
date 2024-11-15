@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const TEXTS = [
   "Unique!",
@@ -21,6 +22,8 @@ const TEXTS = [
 const Hero = () => {
   const [index, setIndex] = useState(0);
 
+  const isSM = useMediaQuery(578);
+
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
     return () => clearTimeout(intervalId);
@@ -28,9 +31,21 @@ const Hero = () => {
 
   return (
     <>
+      <video
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        autoPlay
+        muted
+        loop
+      >
+        <source src="/videos/hero_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="absolute inset-0 z-10 hidden h-full w-full bg-black bg-opacity-50 backdrop-blur-sm md:block" />
+
       <section
         id="home"
-        className="relative z-10 w-full content-center overflow-hidden bg-gradient-to-b from-cyan-300 to-slate-50 px-4 pt-20 dark:bg-gradient-to-b dark:from-violet-950 dark:to-black md:mt-0 md:h-screen md:py-0"
+        className={`${isSM && "bg-gradient-to-b from-cyan-300 to-slate-50 dark:from-violet-950 dark:to-black"} relative z-10 w-full content-center overflow-hidden px-4 pt-20 md:mt-0 md:h-screen md:py-0`}
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -42,7 +57,7 @@ const Hero = () => {
                   </Link>
                 </div>
 
-                <h1 className="text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Make Your Events
                 </h1>
 
@@ -55,14 +70,14 @@ const Hero = () => {
                   </h1>
                 </TextTransition>
 
-                <p className="my-10 hidden text-base !leading-relaxed text-black dark:text-body-color-dark md:block">
+                <p className="my-10 hidden text-base !leading-relaxed text-body-color-dark md:block">
                   Apidon provides event organizers with a platform to create and
                   share unique digital collectibles, transforming events into
                   memorable experiences that boost engagement, enhance brand
                   visibility, and leave a lasting impact on attendees.
                 </p>
 
-                <p className="my-10 mt-5 text-base !leading-relaxed text-black dark:text-body-color-dark md:hidden">
+                <p className="my-10 mt-5 text-base !leading-relaxed text-body-color-dark md:hidden">
                   Apidon offers event organizers a platform to create and share
                   digital collectibles, enhancing engagement, brand visibility,
                   and creating memorable experiences.
