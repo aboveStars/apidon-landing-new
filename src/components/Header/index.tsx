@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   // Sticky Navbar
@@ -42,7 +41,9 @@ const Header = () => {
                     src="/images/logo/logo.png"
                     alt="logo"
                   />
-                  <text className="text-lg font-bold text-black dark:text-white md:text-xl">
+                  <text
+                    className={`${sticky ? "text-black dark:text-white" : "text-white"} text-lg font-bold md:text-xl`}
+                  >
                     APIDON
                   </text>
                 </div>
@@ -52,7 +53,7 @@ const Header = () => {
               <div className="flex w-full items-center justify-end lg:pr-0">
                 <Link
                   href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className="hidden rounded-full px-7 py-3 text-base font-medium text-dark transition duration-300 hover:bg-gray-200 hover:opacity-80 dark:text-white dark:hover:bg-gray-700 md:block"
+                  className={`${sticky ? "text-black dark:text-white" : "text-white"} hidden rounded-full px-7 py-3 text-base font-medium  transition duration-300 hover:bg-gray-200 hover:opacity-80 dark:hover:bg-gray-700 md:block`}
                 >
                   Sign In
                 </Link>
@@ -63,9 +64,6 @@ const Header = () => {
                 >
                   Sign Up
                 </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
               </div>
             </div>
           </div>

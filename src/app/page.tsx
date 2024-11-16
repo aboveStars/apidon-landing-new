@@ -7,8 +7,8 @@ import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Apidon",
-  description: "Make Every Event Unforgettable",
+  title: "Apidon • Make Every Event Unique",
+  description: "Make Every Event Unique",
   icons: [
     {
       media: "(prefers-color-scheme: light)",
@@ -21,6 +21,19 @@ export const metadata: Metadata = {
       href: "/images/android-icon-48x48.png",
     },
   ],
+  openGraph: {
+    title: "Apidon • Make Every Event Unique",
+    description: "Make Every Event Unique",
+    url: "https://apidon.com",
+    siteName: "Apidon",
+    images: [
+      {
+        url: "https://apidon.com/images/og.png",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 };
 
 export default function Home() {

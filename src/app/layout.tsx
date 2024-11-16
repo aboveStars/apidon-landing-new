@@ -35,4 +35,3 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
-import { Metadata } from "next";

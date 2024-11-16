@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+import useScreenWidth from "@/hooks/useScreenWidth";
+import { Stream } from "@cloudflare/stream-react";
 
 const TEXTS = [
   "Unique!",
@@ -22,7 +24,9 @@ const TEXTS = [
 const Hero = () => {
   const [index, setIndex] = useState(0);
 
-  const isSM = useMediaQuery(578);
+  const screenWidth = useScreenWidth();
+
+  const isLG = screenWidth >= 1200;
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
@@ -31,21 +35,23 @@ const Hero = () => {
 
   return (
     <>
-      <video
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
-        autoPlay
-        muted
-        loop
-      >
-        <source src="/videos/hero_video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div className="absolute inset-0 z-10 hidden h-full w-full bg-black bg-opacity-50 backdrop-blur-sm md:block" />
+      {isLG && (
+        <>
+          <div className="absolute inset-0 h-full w-full content-center items-start justify-center overflow-hidden">
+            <Stream
+              src={process.env.NEXT_PUBLIC_CLOUDFLARE_HERO_VIDEO_ID}
+              autoplay
+              muted
+              loop
+            />
+          </div>
+          <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-70" />
+        </>
+      )}
 
       <section
         id="home"
-        className={`${isSM && "bg-gradient-to-b from-cyan-300 to-slate-50 dark:from-violet-950 dark:to-black"} relative z-10 w-full content-center overflow-hidden px-4 pt-20 md:mt-0 md:h-screen md:py-0`}
+        className={`${!isLG && "bg-gradient-to-b from-cyan-300 to-slate-50 dark:from-violet-950 dark:to-black"} relative z-10 w-full content-center overflow-hidden px-4 pt-20 md:mt-0 md:h-screen md:py-0`}
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
