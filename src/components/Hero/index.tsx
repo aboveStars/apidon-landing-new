@@ -4,7 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowDownCircleIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
 
 import useScreenWidth from "@/hooks/useScreenWidth";
 import { Stream } from "@cloudflare/stream-react";
@@ -34,6 +37,13 @@ const Hero = () => {
     return () => clearTimeout(intervalId);
   }, []);
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       {isLG && (
@@ -46,9 +56,16 @@ const Hero = () => {
               loop
               responsive={true}
               className={`${!isXL && `scale-[2]`}`}
+
             />
           </div>
           <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-70" />
+          <div className="absolute bottom-20 z-20 flex w-screen content-center items-center justify-center">
+            <ArrowDownCircleIcon
+              onClick={handleScroll}
+              className="size-14 animate-bounce text-white"
+            />
+          </div>
         </>
       )}
 
