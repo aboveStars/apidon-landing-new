@@ -8,7 +8,10 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative z-10 px-5 py-16 md:py-20 lg:py-28">
+    <section
+      id="pricing"
+      className="relative z-10 px-5 py-16 md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
@@ -67,7 +70,7 @@ const Pricing = () => {
             <OfferList text="Digital Collectibles Creation" status="inactive" />
             <OfferList text="Guest Engagement" status="inactive" />
             <OfferList text="Real-Time Event Analytics" status="inactive" />
-            <OfferList text="Brand Visibility" status="inactive" />
+            <OfferList text="Maximum Brand Visibility" status="inactive" />
             <OfferList text="Priority Support" status="inactive" />
           </PricingBox>
           <PricingBox
@@ -80,7 +83,7 @@ const Pricing = () => {
             <OfferList text="Digital Collectibles Creation" status="active" />
             <OfferList text="Guest Engagement" status="active" />
             <OfferList text="Real-Time Event Analytics" status="inactive" />
-            <OfferList text="Brand Visibility" status="inactive" />
+            <OfferList text="Maximum Brand Visibility" status="inactive" />
             <OfferList text="Priority Support" status="active" />
           </PricingBox>
           <PricingBox
@@ -93,7 +96,7 @@ const Pricing = () => {
             <OfferList text="Digital Collectibles Creation" status="active" />
             <OfferList text="Guest Engagement" status="active" />
             <OfferList text="Real-Time Event Analytics" status="active" />
-            <OfferList text="Brand Visibility" status="active" />
+            <OfferList text="Maximum Brand Visibility" status="active" />
             <OfferList text="Priority Support" status="active" />
           </PricingBox>
         </div>

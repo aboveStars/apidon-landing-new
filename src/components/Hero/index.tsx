@@ -59,7 +59,7 @@ const Hero = () => {
             />
           </div>
           <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-[0.65]" />
-          <div className="absolute bottom-20 z-20 flex w-screen content-center items-center justify-center">
+          <div className="absolute bottom-20 z-30 flex w-screen content-center items-center justify-center">
             <ArrowDownCircleIcon
               onClick={handleScroll}
               className="size-10 animate-bounce cursor-pointer text-white"
@@ -82,7 +82,7 @@ const Hero = () => {
                   </Link>
                 </div>
 
-                <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
+                <h1 className="text-2xl font-extrabold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
                   Make Your Events
                 </h1>
 
@@ -90,7 +90,7 @@ const Hero = () => {
                   springConfig={presets.wobbly}
                   className="overflow-hidden lg:justify-center"
                 >
-                  <h1 className="to-yellow-500 inline-block bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-5xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight lg:text-7xl lg:leading-tight">
+                  <h1 className="to-yellow-500 inline-block bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-5xl font-extrabold leading-tight text-transparent sm:text-5xl sm:leading-tight lg:text-7xl lg:leading-tight">
                     {TEXTS[index % TEXTS.length]}
                   </h1>
                 </TextTransition>

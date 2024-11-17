@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah L.",
-    designation: "Event Organizer",
+    name: "Event Memories That Last Forever",
+    designation: "",
     content:
-      "Apidon has transformed the way we engage with our guests. The digital collectibles are such a hit—they’re unique, memorable, and our guests love sharing them!",
+      "Imagine you’ve just attended a club event or a campus gathering, and instead of walking away with just a fleeting memory, you receive a unique digital collectible representing the event. With Apidon, organizers create these one-of-a-kind event collectibles using a favorite photo. Guests enter their event codes in the app, and the collectible instantly appears on their profile as proof of attendance. It’s not just a keepsake; it’s a conversation starter and a way to relive the experience.",
     image: "/images/testimonials/woman.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Jake M.",
-    designation: "Conference Host",
+    name: "Social Connections Through Collectibles",
+    designation: "",
     content:
-      "Using Apidon added a whole new dimension to our event. Guests could showcase their attendance, and the brand exposure we gained from their sharing was incredible.",
+      "Apidon turns collectibles into social experiences. When you check your friend’s profile, you’ll see a gallery of events they’ve attended, complete with photos, descriptions, and even ratings or comments. You can explore what events they’ve been part of and interact by liking or commenting on their collectibles. It’s a unique way to connect through shared experiences and discover new opportunities.",
     image: "/images/testimonials/man.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Emily R.",
+    name: "Boost Visibility for Your Events",
     designation: "Festival Organizer",
     content:
-      "Apidon’s platform was a game-changer. It’s easy to create custom collectibles, and the social features helped our event stay visible and talked about long after it ended!",
+      "For event organizers, Apidon isn’t just about creating memories—it’s about amplifying your impact. When attendees share and display your event’s collectible on their profiles, they spread awareness about your organization or club. Apidon turns your event into a lasting digital presence that draws attention and boosts participation in future activities. It’s effortless promotion through personal connections.",
     image: "/images/testimonials/woman.png",
     star: 5,
   },
@@ -37,7 +37,7 @@ const Testimonials = () => {
     <section className="relative z-10 bg-gray-light px-5 py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
+          title="Use Cases"
           paragraph="Discover how Apidon is transforming events through the experiences of our users."
         />
 
