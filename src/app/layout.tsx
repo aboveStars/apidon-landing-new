@@ -3,11 +3,11 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Roboto({ subsets: ["latin"], weight: "500" });
 
 export default function RootLayout({
   children,
@@ -22,7 +22,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={"bg-[#FCFCFC] dark:bg-black font-sans"}>
+      <body className={`bg-black ${font.className}`}>
         <Providers>
           <Header />
           {children}
