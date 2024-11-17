@@ -58,7 +58,7 @@ const Hero = () => {
               height="1080"
             />
           </div>
-          <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-70" />
+          <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-[0.65]" />
           <div className="absolute bottom-20 z-20 flex w-screen content-center items-center justify-center">
             <ArrowDownCircleIcon
               onClick={handleScroll}
@@ -70,7 +70,7 @@ const Hero = () => {
 
       <section
         id="home"
-        className={`${!isLG && "bg-gradient-to-b from-cyan-300 to-slate-50 dark:from-violet-950 dark:to-black"} relative z-10 w-full content-center overflow-hidden px-4 pt-20 lg:mt-0 lg:h-screen lg:py-0`}
+        className={`${!isLG && "bg-gradient-to-b from-cyan-300 to-slate-50 dark:from-violet-950 dark:to-black"} relative z-20 w-full content-center overflow-hidden px-4 pt-20 lg:mt-0 lg:h-screen lg:py-0`}
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -95,11 +95,11 @@ const Hero = () => {
                   </h1>
                 </TextTransition>
 
-                <p className="my-10 hidden text-base !leading-relaxed text-body-color-dark lg:block">
+                <p className="my-10 hidden text-base !leading-relaxed text-gray-300 lg:block">
                   Apidon provides event organizers with a platform to create and
                   share unique digital collectibles, transforming events into
                   memorable experiences that boost engagement, enhance brand
-                  visibility, and leave a lasting impact on attendees.
+                  visibility, and leave a lasting impact on your attendees.
                 </p>
 
                 <p className="my-10 mt-5 text-base !leading-relaxed text-body-color-dark lg:hidden">
