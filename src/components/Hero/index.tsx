@@ -54,8 +54,10 @@ const Hero = () => {
               autoplay
               muted
               loop
-              responsive={true}
-              className={`${!isXL && `scale-[2]`}`}
+              responsive={false}
+              width="1920"
+              height="1080"
+            //  className={`${!isXL && `scale-[2]`}`}
 
             />
           </div>
@@ -63,7 +65,7 @@ const Hero = () => {
           <div className="absolute bottom-20 z-20 flex w-screen content-center items-center justify-center">
             <ArrowDownCircleIcon
               onClick={handleScroll}
-              className="size-14 animate-bounce text-white"
+              className="size-14 animate-bounce text-white cursor-pointer"
             />
           </div>
         </>
