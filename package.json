@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "react-modal-video": "^2.0.1",
     "react-text-transition": "^3.1.0",
-    "react-type-animation": "^3.2.0"
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",

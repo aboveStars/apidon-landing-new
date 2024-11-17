@@ -21,8 +21,8 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center justify-center ${
           sticky
-            ? "fixed z-[9999] bg-white !bg-opacity-80 py-4 backdrop-blur-sm transition dark:bg-gray-dark"
-            : "fixed bg-transparent py-4"
+            ? "fixed z-[9999] bg-black bg-opacity-50 py-5 backdrop-blur-sm transition "
+            : "fixed bg-transparent py-5"
         }`}
       >
         <div className="container">
@@ -49,18 +49,18 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
-              <div className="flex w-full items-center justify-end lg:pr-0">
+            <div className="flex w-full items-center justify-between ">
+              <div className="flex w-full items-center justify-end gap-x-10 lg:pr-0">
                 <Link
                   href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className={`${sticky ? "text-black dark:text-white" : "text-white"} hidden rounded-full px-7 py-3 text-base font-medium  transition duration-300 hover:bg-gray-200 hover:opacity-80 dark:hover:bg-gray-700 md:block`}
+                  className={`${sticky ? "text-black dark:text-white" : "text-white"} hidden rounded-full text-base font-medium md:block`}
                 >
                   Sign In
                 </Link>
 
                 <Link
                   href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className="dark:bg-primary-dark hidden rounded-full bg-primary px-8 py-3 text-base font-medium text-white shadow-md transition duration-300 hover:bg-opacity-90 hover:shadow-lg md:block md:px-9 lg:px-6 xl:px-9"
+                  className="dark:bg-primary-dark hidden py-2 rounded-full bg-primary text-base font-medium text-white shadow-md transition duration-300 hover:bg-opacity-90 hover:shadow-lg md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Sign Up
                 </Link>

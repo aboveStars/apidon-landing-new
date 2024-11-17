@@ -35,7 +35,7 @@ const Footer = () => {
                   </div>
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Make Every Event Unique
+                  Make Every Event Unique.
                 </p>
                 <div className="flex items-center">
                   <a
