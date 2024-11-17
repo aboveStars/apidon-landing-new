@@ -30,7 +30,6 @@ const Hero = () => {
   const screenWidth = useScreenWidth();
 
   const isLG = screenWidth >= 992;
-  const isXL = screenWidth >= 1400;
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 1500);
@@ -57,15 +56,13 @@ const Hero = () => {
               responsive={false}
               width="1920"
               height="1080"
-            //  className={`${!isXL && `scale-[2]`}`}
-
             />
           </div>
           <div className="absolute inset-0 z-10 h-full w-full bg-black bg-opacity-70" />
           <div className="absolute bottom-20 z-20 flex w-screen content-center items-center justify-center">
             <ArrowDownCircleIcon
               onClick={handleScroll}
-              className="size-14 animate-bounce text-white cursor-pointer"
+              className="size-10 animate-bounce cursor-pointer text-white"
             />
           </div>
         </>

@@ -22,7 +22,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.style}`}>
+      <body className={"bg-[#FCFCFC] dark:bg-black font-sans"}>
         <Providers>
           <Header />
           {children}
