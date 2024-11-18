@@ -43,7 +43,7 @@ export default function Page() {
           You&apos;ll be redirected to the app in a few seconds.
         </p>
         <p className="text-md mt-5 text-gray-400">
-          If you're using an Android device, the app will become available soon.
+          If you&apos;re using an Android device, the app will become available soon.
           Stay tuned!
         </p>
       </div>
