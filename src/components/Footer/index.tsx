@@ -25,7 +25,10 @@ const Footer = () => {
           </Link>
         </div>
 
-        <Link href="/privacy-policy" className="cursor-pointer underline">
+        <Link
+          href="https://support.apidon.com/privacy-policy"
+          className="cursor-pointer underline"
+        >
           Privacy Policy
         </Link>
 
