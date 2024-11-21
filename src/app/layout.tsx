@@ -16,11 +16,48 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+      <head>
+        <head>
+          {/* Basic Metadata */}
+          <title>Apidon • Make Every Event Unique</title>
+          <meta name="description" content="Make Every Event Unique" />
+
+          {/* Icons for Light and Dark Modes */}
+          <link
+            rel="icon"
+            type="image/png"
+            media="(prefers-color-scheme: light)"
+            href="/images/android-icon-48x48.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            media="(prefers-color-scheme: dark)"
+            href="/images/android-icon-48x48.png"
+          />
+
+          {/* Open Graph Metadata */}
+          <meta
+            property="og:title"
+            content="Apidon • Make Every Event Unique"
+          />
+          <meta property="og:description" content="Make Every Event Unique" />
+          <meta property="og:url" content="https://apidon.com" />
+          <meta property="og:site_name" content="Apidon" />
+          <meta
+            property="og:image"
+            content="https://apidon.com/images/og.png"
+          />
+          <meta property="og:locale" content="en-US" />
+          <meta property="og:type" content="website" />
+
+          <meta name="apple-itunes-app" content="app-id=6737543465"></meta>
+        </head>
+      </head>
+
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY || ""}
+      />
 
       <body className={`bg-black ${font.className}`}>
         <Providers>
@@ -35,3 +72,5 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
+import { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
