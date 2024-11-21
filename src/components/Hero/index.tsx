@@ -11,6 +11,7 @@ import {
 
 import useScreenWidth from "@/hooks/useScreenWidth";
 import { Stream } from "@cloudflare/stream-react";
+import Image from "next/image";
 
 const TEXTS = [
   "Unique!",
@@ -78,7 +79,7 @@ const Hero = () => {
               <div className="mx-auto max-w-[800px] lg:text-center">
                 <div className="my-3 mb-8 rounded-full bg-gradient-to-r from-violet-800 to-cyan-500 px-5 py-2.5 text-center text-xs font-bold lg:hidden">
                   <Link href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}>
-                    🚀 Apidon Public Beta is Now Live 🚀
+                    🚀 Apidon is Now Live 🚀
                   </Link>
                 </div>
 
@@ -109,18 +110,15 @@ const Hero = () => {
                 </p>
                 <Link
                   href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className="relative hidden rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 lg:inline-block"
+                  className="relative inline-block"
                 >
-                  Join Beta on TestFlight!
-                  <span className="absolute inset-0 h-full w-full rounded-lg bg-white opacity-0 transition-opacity duration-300 ease-in-out"></span>
+                  <Image
+                    src="/images/appstore.svg"
+                    width={175}
+                    height={175}
+                    alt=""
+                  />
                 </Link>
-
-                <div className="mb-5 flex w-4/5 items-center justify-between rounded-lg border border-solid border-gray-700 px-5 py-3 lg:hidden">
-                  <Link href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}>
-                    Join Beta on TestFlight!
-                  </Link>
-                  <ArrowRightIcon className="size-4" />
-                </div>
               </div>
             </div>
           </div>

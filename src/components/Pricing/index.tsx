@@ -77,7 +77,7 @@ const Pricing = () => {
             packageName="Premium"
             price={isMonthly ? "19" : "190"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Advanced tools for engagement and brand visibility."
+            subtitle="Advanced tools for engagement and your brand visibility."
           >
             <OfferList text="Social Media Integration" status="active" />
             <OfferList text="Digital Collectibles Creation" status="active" />

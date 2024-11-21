@@ -27,7 +27,7 @@ const PricingBox = (props: {
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             <Link href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}>
-              Join Beta on TestFlight!
+              Open App
             </Link>
           </button>
         </div>
