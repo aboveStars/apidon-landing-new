@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.abovestars.prod.apidon",
+      "sha256_cert_fingerprints": [
+        "9C:86:77:D6:1B:9E:9B:0E:51:FE:57:FF:D9:CA:D9:F7:42:FE:A3:FB:BC:EB:FE:D4:B0:54:CB:89:19:19:4B:B0"
+      ]
+    }
+  }
+]
