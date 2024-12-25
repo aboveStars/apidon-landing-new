@@ -16,6 +16,13 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <header
@@ -28,7 +35,10 @@ const Header = () => {
         <div className="container">
           <div className={`relative flex items-center justify-between`}>
             <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link href="/" className={`header-logo block w-full`}>
+              <button
+                onClick={handleScroll}
+                className={`header-logo block w-full`}
+              >
                 <div
                   style={{
                     display: "flex",
@@ -47,23 +57,23 @@ const Header = () => {
                     APIDON
                   </text>
                 </div>
-              </Link>
+              </button>
             </div>
             <div className="flex w-full items-center justify-between ">
               <div className="flex w-full items-center justify-end gap-x-10 lg:pr-0">
-                <Link
-                  href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
+                <button
+                  onClick={handleScroll}
                   className={`${sticky ? "text-black dark:text-white" : "text-white"} hidden rounded-full text-base font-medium md:block`}
                 >
                   Sign In
-                </Link>
+                </button>
 
-                <Link
-                  href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className="dark:bg-primary-dark hidden py-2 rounded-full bg-primary text-base font-medium text-white shadow-md transition duration-300 hover:bg-opacity-90 hover:shadow-lg md:block md:px-9 lg:px-6 xl:px-9"
+                <button
+                  onClick={handleScroll}
+                  className="dark:bg-primary-dark hidden rounded-full bg-primary py-2 text-base font-medium text-white shadow-md transition duration-300 hover:bg-opacity-90 hover:shadow-lg md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Sign Up
-                </Link>
+                </button>
               </div>
             </div>
           </div>

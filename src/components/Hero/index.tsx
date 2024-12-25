@@ -4,10 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
-import {
-  ArrowDownCircleIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 
 import useScreenWidth from "@/hooks/useScreenWidth";
 import { Stream } from "@cloudflare/stream-react";
@@ -108,17 +105,30 @@ const Hero = () => {
                   digital collectibles, enhancing engagement, brand visibility,
                   and creating memorable experiences.
                 </p>
-                <Link
-                  href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
-                  className="relative inline-block"
-                >
-                  <Image
-                    src="/images/appstore.svg"
-                    width={175}
-                    height={175}
-                    alt=""
-                  />
-                </Link>
+                <div className="flex items-center justify-center">
+                  <Link
+                    href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}
+                    className="relative inline-block"
+                  >
+                    <Image
+                      src="/images/appstore.svg"
+                      width={175}
+                      height={175}
+                      alt=""
+                    />
+                  </Link>
+                  <Link
+                    href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL}
+                    className="relative inline-block"
+                  >
+                    <Image
+                      src="/images/google-play-badge.png"
+                      width={210}
+                      height={1}
+                      alt=""
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

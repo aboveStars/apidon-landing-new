@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const PricingBox = (props: {
   price: string;
   duration: string;
@@ -8,6 +6,13 @@ const PricingBox = (props: {
   children: React.ReactNode;
 }) => {
   const { price, duration, packageName, subtitle, children } = props;
+
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="w-full">
@@ -25,10 +30,11 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            <Link href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL}>
-              Open App
-            </Link>
+          <button
+            onClick={handleScroll}
+            className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+          >
+            Open App
           </button>
         </div>
         <div>{children}</div>
