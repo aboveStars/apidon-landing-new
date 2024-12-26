@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -23,6 +24,12 @@ const Header = () => {
     });
   };
 
+  const pathName = usePathname();
+
+  const handleLogo = () => {
+    pathName === "/" ? handleScroll() : (window.location.href = "/");
+  };
+
   return (
     <>
       <header
@@ -36,7 +43,7 @@ const Header = () => {
           <div className={`relative flex items-center justify-between`}>
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <button
-                onClick={handleScroll}
+                onClick={handleLogo}
                 className={`header-logo block w-full`}
               >
                 <div
