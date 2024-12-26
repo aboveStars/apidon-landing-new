@@ -40,7 +40,7 @@ export default function RedirectPageComponent() {
       </div>
 
       <p className="mt-8 text-sm">
-        Don't have the app yet? Download it from the links below to get started.
+        Don&apos;t have the app yet? Download it from the links below to get started.
       </p>
       <div className="mt-1 flex items-center justify-center">
         <Link
