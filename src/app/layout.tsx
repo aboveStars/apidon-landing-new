@@ -17,42 +17,34 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        <head>
-          {/* Basic Metadata */}
-          <title>Apidon • Make Every Event Unique</title>
-          <meta name="description" content="Make Every Event Unique" />
+        {/* Basic Metadata */}
+        <title>Apidon • Make Every Event Unique</title>
+        <meta name="description" content="Make Every Event Unique" />
 
-          {/* Icons for Light and Dark Modes */}
-          <link
-            rel="icon"
-            type="image/png"
-            media="(prefers-color-scheme: light)"
-            href="/images/android-icon-48x48.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            media="(prefers-color-scheme: dark)"
-            href="/images/android-icon-48x48.png"
-          />
+        {/* Icons for Light and Dark Modes */}
+        <link
+          rel="icon"
+          type="image/png"
+          media="(prefers-color-scheme: light)"
+          href="/images/android-icon-48x48.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          media="(prefers-color-scheme: dark)"
+          href="/images/android-icon-48x48.png"
+        />
 
-          {/* Open Graph Metadata */}
-          <meta
-            property="og:title"
-            content="Apidon • Make Every Event Unique"
-          />
-          <meta property="og:description" content="Make Every Event Unique" />
-          <meta property="og:url" content="https://apidon.com" />
-          <meta property="og:site_name" content="Apidon" />
-          <meta
-            property="og:image"
-            content="https://apidon.com/images/og.png"
-          />
-          <meta property="og:locale" content="en-US" />
-          <meta property="og:type" content="website" />
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Apidon • Make Every Event Unique" />
+        <meta property="og:description" content="Make Every Event Unique" />
+        <meta property="og:url" content="https://apidon.com" />
+        <meta property="og:site_name" content="Apidon" />
+        <meta property="og:image" content="https://apidon.com/images/og.png" />
+        <meta property="og:locale" content="en-US" />
+        <meta property="og:type" content="website" />
 
-          <meta name="apple-itunes-app" content="app-id=6737543465"></meta>
-        </head>
+        <meta name="apple-itunes-app" content="app-id=6737543465"></meta>
       </head>
 
       <GoogleAnalytics
@@ -71,6 +63,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
-import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Providers } from "./providers";
